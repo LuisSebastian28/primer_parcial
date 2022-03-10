@@ -7,6 +7,16 @@ const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  div.innerHTML = "<p>" + titulo.value + "</p>";
+  const texto  = titulo.value;
+  var largo = texto.length;
+
+  if(largo > 5){
+    div.innerHTML = div.innerHTML+"<p>" + "Demasidos caracteres en el tiulo" + "</p>";
+  }
+  div.innerHTML = div.innerHTML+ "<p>" + titulo.value + "</p>";
   div.innerHTML = div.innerHTML+ "<p>" + detalle.value + "</p>";
+  div.innerHTML = div.innerHTML+ "<p>" + largo + "</p>";;
+
+
+
 });
